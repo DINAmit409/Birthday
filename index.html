@@ -29,7 +29,7 @@
 
     <h2>📩 Deine Antwort</h2>
   
-      <form action="https://formspree.io/f/movwpkrw" method="POST">
+      <form id="meinFormular" action="https://formspree.io/f/movwpkrw" method="POST">
 
       <label for="name">Dein Name:</label><br>
       <input type="text" id="name" name="name" required><br><br>
@@ -48,5 +48,39 @@
 
       <button type="submit">Absenden</button>
     </form>
+    <p id="dankeNachricht" style="display:none; font-weight: bold; color: green;">
+   Danke für deine Antwort<3
+</p
+
+  <script>
+  const form = document.getElementById('meinFormular');
+  const dankeText = document.getElementById('dankeNachricht');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault(); // Verhindert Seiten-Neuladen
+
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.style.display = 'none'; // Versteckt das Formular
+        dankeText.style.display = 'block'; // Zeigt Danke-Text
+      } else {
+        alert('Fehler beim Absenden 😢');
+      }
+    } catch (error) {
+      alert('Es gab ein Problem beim Senden 😢');
+    }
+  });
+</script>
+
   </body>
 </html>
