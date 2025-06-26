@@ -5,8 +5,12 @@ body {
   padding: 0;
   font-family: 'Quicksand', sans-serif;
   background-color: #ffe6f2; /* hellrosa Hintergrund */
-  background-image: radial-gradient(#e0bbff 14px, transparent 14px); /* helllila Punkte */
-  background-size: 70px 70px; /* größere Abstände für größere Punkte */
+  /* Punkte etwas kleiner und versetzt (schräg) */
+  background-image: 
+    radial-gradient(#e0bbff 10px, transparent 10px),
+    radial-gradient(#e0bbff 10px, transparent 10px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px; /* versetztes Muster */
   color: #4b004b; /* dunkles Lila für Text */
 }
 
