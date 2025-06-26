@@ -1,34 +1,43 @@
+/* Polka Dot Hintergrund */
 body {
-  background: linear-gradient(to bottom, #fff7e6, #ffdfba);
+  background-color: #add8e6; /* Hellblau */
+  background-image: radial-gradient(white 5px, transparent 6px);
+  background-size: 40px 40px;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
   margin: 0;
   padding: 20px;
 }
 
+/* Überschrift */
 h1 {
-  color: #e67300;
+  color: #004080;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
 }
 
+/* Unterüberschriften */
 h2 {
-  color: #ff944d;
+  color: #0066cc;
   margin-top: 30px;
 }
 
+/* Allgemeiner Text */
 p, li, label {
   font-size: 1.1em;
 }
 
+/* Formular-Styling */
 form {
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: white;
+  border-radius: 12px;
   padding: 20px;
   margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
+/* Eingabefelder */
 input, textarea, button {
   width: 100%;
   padding: 10px;
@@ -36,10 +45,12 @@ input, textarea, button {
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 1em;
 }
 
+/* Button */
 button {
-  background-color: #ffa64d;
+  background-color: #3399ff;
   border: none;
   color: white;
   font-weight: bold;
@@ -48,11 +59,12 @@ button {
 }
 
 button:hover {
-  background-color: #e67300;
+  background-color: #007acc;
 }
 
+/* Links */
 a {
-  color: #ff6600;
+  color: #004080;
   text-decoration: none;
 }
 
@@ -60,3 +72,11 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Danke-Nachricht */
+#dankeNachricht {
+  background-color: #ccf2ff;
+  padding: 15px;
+  border: 2px dashed #3399ff;
+  border-radius: 10px;
+  color: #006699;
+}
