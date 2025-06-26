@@ -16,6 +16,11 @@
       <a href="https://maps.app.goo.gl/k5RGxL85LRXhw7CE7"_blank">→ Standort bei Google Maps</a>
     </p>
 
+    <h2>🎵 Deine Lieblingssongs</h2>
+    <p>Ich erstelle eine gemeinsame Spotify-Playlist! 🎧<br>
+    Schreib mir deine Lieblingslieder unten rein oder füge sie direkt hier hinzu:<br>
+    <a href="https://open.spotify.com/playlist/7MUVklW8mGY81yREOZYyG7?si=ibqDVf0wTKqbjBfHXfPd7g&pt=2c505a2d40985c2cad5f23ca04eab34a&pi=RrQHIjDBRBiOF" target="_blank">→ Zur Playlist</a></p>
+
     <h2>📩 Deine Antwort</h2>
   
       <form id="meinFormular" action="https://formspree.io/f/movwpkrw" method="POST">
@@ -31,14 +36,21 @@
       <input type="radio" id="nein" name="kommt" value="nein">
       <label for="nein">Nein</label><br><br>
 
-      <label for="essen">Unverträglichkeiten oder Wünsche:</label><br>
+      <label for="essen">Unverträglichkeiten oder Essenswünsche:</label><br>
       <textarea id="essen" name="essen" rows="4" cols="40"></textarea><br><br>
+
+        
+      <label for="ideen">Ideen für Unterhaltung / Lieblingslieder:</label><br>
+      <textarea id="ideen" name="ideen" rows="4" cols="40" placeholder="z.B. Spiele, Musikvorschläge, Aktionen ..."></textarea><br><br>
+
 
       <button type="submit">Absenden</button>
     </form>
     <p id="dankeNachricht" style="display:none; font-weight: bold; color: green;">
    Danke für deine Antwort<3
     </p>
+
+    <img src="" alt="bild" width="300">
 
   <script>
   const form = document.getElementById('meinFormular');
