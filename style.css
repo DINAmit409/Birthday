@@ -1,82 +1,79 @@
-/* Polka Dot Hintergrund */
+/* Sanftes Blau als Hintergrund */
 body {
-  background-color: #add8e6; /* Hellblau */
-  background-image: radial-gradient(white 5px, transparent 6px);
-  background-size: 40px 40px;
+  background-color: #e6f7ff;
   font-family: 'Segoe UI', sans-serif;
-  color: #333;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  color: #333;
 }
 
-/* Überschrift */
+/* Zentrierte Hauptkarte */
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hauptüberschrift */
 h1 {
-  color: #004080;
   text-align: center;
   font-size: 2.8em;
+  color: #0077b6;
   margin-bottom: 0.5em;
 }
 
 /* Unterüberschriften */
 h2 {
-  color: #0066cc;
+  color: #0096c7;
   margin-top: 30px;
 }
 
-/* Allgemeiner Text */
+/* Standardtext */
 p, li, label {
   font-size: 1.1em;
+  line-height: 1.6;
 }
 
-/* Formular-Styling */
+/* Formular */
 form {
-  background-color: white;
-  border-radius: 12px;
-  padding: 20px;
   margin-top: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-/* Eingabefelder */
+/* Inputs */
 input, textarea, button {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
+  margin-top: 6px;
   margin-bottom: 15px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px;
   font-size: 1em;
 }
 
-/* Button */
+/* Submit-Button */
 button {
-  background-color: #3399ff;
-  border: none;
+  background-color: #00b4d8;
   color: white;
   font-weight: bold;
+  border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #007acc;
+  background-color: #0096c7;
 }
 
-/* Links */
-a {
-  color: #004080;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Danke-Nachricht */
+/* Danke-Text */
 #dankeNachricht {
-  background-color: #ccf2ff;
+  background-color: #d0f0fd;
   padding: 15px;
-  border: 2px dashed #3399ff;
+  border-left: 5px solid #00b4d8;
   border-radius: 10px;
-  color: #006699;
+  font-weight: bold;
+  color: #005f73;
+  margin-top: 20px;
 }
