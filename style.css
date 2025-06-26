@@ -1,91 +1,89 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>🎉 Einladung zu meiner Geburtstagsparty!</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>🎂 Meine Geburtstagsparty 🎈</h1>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
-    <hr>⭐️⭐️⭐️<hr>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #d0ebff;
+  background-image: radial-gradient(white 6%, transparent 6%);
+  background-size: 30px 30px;
+  color: #333;
+}
 
-    <h2>📍 Infos</h2>
-    <p>Am <strong>5. Juli</strong> ab 18 Uhr in <em>Nehden</em>.</p>
+main {
+  max-width: 700px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
-    <h2>🧭 Weg zur Location</h2>
-    <p>Die Party ist in der Grillhütte.</p>
-    <p>
-      <a href="https://maps.app.goo.gl/k5RGxL85LRXhw7CE7" target="_blank">
-        👉 Standort bei Google Maps 🗺️
-      </a>
-    </p>
+/* Überschriften */
+h1, h2 {
+  color: #0066aa;
+  margin-top: 0;
+}
 
-    <hr>⭐️⭐️⭐️<hr>
+/* Link-Stil */
+a {
+  color: #0099cc;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    <h2>🎵 Deine Lieblingssongs</h2>
-    <p>
-      Ich erstelle eine gemeinsame Spotify-Playlist! 🎧<br>
-      Schreib mir deine Lieblingslieder oder füge sie direkt hinzu:<br>
-      <a href="https://open.spotify.com/playlist/7MUVklW8mGY81yREOZYyG7?si=ibqDVf0wTKqbjBfHXfPd7g" target="_blank">
-        🎶 → Zur Playlist auf Spotify
-      </a>
-    </p>
+a:hover {
+  text-decoration: underline;
+}
 
-    <hr>⭐️⭐️⭐️<hr>
+/* Formularfelder */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-size: 1em;
+  background-color: #f9f9f9;
+}
 
-    <h2>📩 Deine Antwort</h2>
-    <form id="meinFormular" action="https://formspree.io/f/movwpkrw" method="POST">
-      <label for="name">🧑‍🎓 Dein Name:</label><br>
-      <input type="text" id="name" name="name" required><br><br>
+/* Radiobuttons */
+input[type="radio"] {
+  margin-right: 8px;
+}
 
-      <label>🎉 Kommst du?</label><br>
-      <input type="radio" id="ja" name="kommt" value="ja" checked>
-      <label for="ja">🥳 Ja</label><br>
-      <input type="radio" id="nein" name="kommt" value="nein">
-      <label for="nein">😢 Nein</label><br><br>
+/* Button */
+button {
+  background-color: #00b3ff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
 
-      <label for="essen">🍽️ Essenswünsche oder Unverträglichkeiten:</label><br>
-      <textarea id="essen" name="essen" rows="3" cols="40"></textarea><br><br>
+button:hover {
+  background-color: #0090cc;
+}
 
-      <label for="ideen">💡 Ideen für Unterhaltung / Lieblingslieder:</label><br>
-      <textarea id="ideen" name="ideen" rows="3" cols="40"></textarea><br><br>
+/* Danke-Nachricht */
+#dankeNachricht {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: green;
+}
 
-      <button type="submit">📨 Absenden</button>
-    </form>
-
-    <p id="dankeNachricht" style="display:none; font-weight: bold; color: green;">
-      🥰 Danke für deine Antwort!
-    </p>
-
-    <hr>⭐️⭐️⭐️<hr>
-
-    <h2>🧸 Zum Schluss ein Lächeln</h2>
-    <img src="images/beari.jpg" alt="Lustiges Bild" width="300">
-
-    <script>
-      const form = document.getElementById('meinFormular');
-      const dankeText = document.getElementById('dankeNachricht');
-
-      form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const formData = new FormData(form);
-        try {
-          const response = await fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-          });
-          if (response.ok) {
-            form.style.display = 'none';
-            dankeText.style.display = 'block';
-          } else {
-            alert('Fehler beim Absenden 😢');
-          }
-        } catch (error) {
-          alert('Es gab ein Problem beim Senden 😢');
-        }
-      });
-    </script>
-  </body>
-</html>
+/* Bild am Ende */
+img {
+  margin-top: 40px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
