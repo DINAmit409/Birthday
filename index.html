@@ -51,6 +51,10 @@
    Danke für deine Antwort<3
     </p>
 
+     <h2>⏳ Countdown</h2>
+<p id="countdown" style="font-size: 1.5em; font-weight: bold;">Lädt...</p>
+ 
+
     <img src="images/beari.jpg" alt="bild" width="400">
         
     </main>
@@ -89,6 +93,35 @@
     }
   });
 </script>
+
+    <script>
+// Countdown-Ziel: 5. Juli, 18:00 Uhr
+const partyDate = new Date("2025-07-05T18:00:00");
+const countdownElement = document.getElementById("countdown");
+
+function updateCountdown() {
+  const now = new Date();
+  const timeLeft = partyDate - now;
+
+  if (timeLeft <= 0) {
+    countdownElement.textContent = "🎉 Die Party läuft schon! Los geht's!";
+    clearInterval(timer);
+    return;
+  }
+
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+  const seconds = Math.floor((timeLeft / 1000) % 60);
+
+  countdownElement.textContent =
+    `${days} Tage, ${hours} Std, ${minutes} Min, ${seconds} Sek`;
+}
+
+const timer = setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
 
   </body>
 </html>
