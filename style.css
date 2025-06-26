@@ -7,8 +7,8 @@ body {
   background-color: #ffe6f2; /* hellrosa Hintergrund */
   /* Punkte etwas kleiner und versetzt (schräg) */
   background-image: 
-    radial-gradient(#e0bbff 10px, transparent 10px),
-    radial-gradient(#e0bbff 10px, transparent 10px);
+    radial-gradient(#e0bbff 12px, transparent 12px),
+    radial-gradient(#e0bbff 12px, transparent 12px);
   background-size: 80px 80px;
   background-position: 0 0, 40px 40px; /* versetztes Muster */
   color: #4b004b; /* dunkles Lila für Text */
