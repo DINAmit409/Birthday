@@ -84,6 +84,16 @@ button:hover {
   color: #008000;
 }
 
+#countdown {
+  background-color: #ffe6f2;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  color: #cc0066;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
 /* Bild am Ende */
 img {
   margin-top: 40px;
