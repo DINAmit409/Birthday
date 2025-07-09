@@ -1,128 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Meine Geburtstagseinladung</title>
-    <link rel="stylesheet" href="style.css">
-
-  </head>
-  <body>
-    <main>
-          <h1>🎉 Meine Geburtstagsparty</h1>
-
-    <h2>📍 Infos</h2>
-    <p>Am <strong>5. Juli</strong> ab 18 Uhr in <em>Nehden</em>.</p>
-
-    <h2>🧭 Location</h2>
-    <p>Die Party ist in der Grillhütte. </p>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Danke!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h2>Danke, dass ihr da wart <3 </h2>
+    <p>Es war richtig schön mit euch.</p>
+    <p>Wenn ihr Fotos gemacht habt, könnt ihr sie gern hier hochladen:</p>
     <p>
-      <a href="https://maps.app.goo.gl/k5RGxL85LRXhw7CE7"_blank">→ Standort bei Google Maps</a>
+      <a href="https://drive.google.com/drive/folder/DEIN-LINK-HIER" target="_blank" rel="noopener noreferrer">
+        Fotos hochladen
+      </a>
     </p>
 
-    <h2>🎵 Lieblingssongs</h2>
-    <p>Ich erstelle eine gemeinsame Spotify-Playlist! 🎧<br>
-    Schreib mir deine Lieblingslieder unten rein oder füge sie direkt hier hinzu:<br>
-    <a href="https://open.spotify.com/playlist/7MUVklW8mGY81yREOZYyG7?si=uxne7RUhTvGTsngzZ4Be8Q&pi=lUo6MaxySNaQE&pt=361e7770d725969ec4da855f5039e8d0" target="_blank">→ Zur Playlist</a></p>
-
-    <h2>📩 </h2>
-  
-      <form id="meinFormular" action="https://formspree.io/f/movwpkrw" method="POST">
-
-      <label for="name">Dein Name:</label><br>
-      <input type="text" id="name" name="name" required><br><br>
-
-         <label>Kommst du?</label><br>
-      <input type="radio" id="ja" name="kommt" value="ja" checked>
-      <label for="ja">Ja</label><br>
-      <input type="radio" id="nein" name="kommt" value="nein">
-      <label for="nein">Nein</label><br><br>
-
-      <label for="essen">Unverträglichkeiten oder Essenswünsche:</label><br>
-      <textarea id="essen" name="essen" rows="4" cols="40"></textarea><br><br>
-
-        
-      <label for="ideen">Ideen für Unterhaltung / Lieblingslieder:</label><br>
-      <textarea id="ideen" name="ideen" rows="4" cols="40" ></textarea><br><br>
-
-
-      <button type="submit">Absenden</button>
-    </form>
-    <p id="dankeNachricht" style="display:none; font-weight: bold; color: green;">
-   Danke für deine Antwort<3
-    </p>
-<div style="margin-top: 40px;"></div>
-
-     <h2>⏳ Countdown</h2>
-<p id="countdown" style="font-size: 1.5em; font-weight: bold;">Lädt...</p>
- 
-
-    <img src="images/beari.jpg" alt="bild" width="400">
-        
-    </main>
-
-
-   
-
-     
-
-  <script>
-  const form = document.getElementById('meinFormular');
-  const dankeText = document.getElementById('dankeNachricht');
-
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault(); // Verhindert Seiten-Neuladen
-
-    const formData = new FormData(form);
-    
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        form.style.display = 'none'; // Versteckt das Formular
-        dankeText.style.display = 'block'; // Zeigt Danke-Text
-      } else {
-        alert('Fehler beim Absenden 😢');
-      }
-    } catch (error) {
-      alert('Es gab ein Problem beim Senden 😢');
-    }
-  });
-</script>
-
-    <script>
-// Countdown-Ziel: 5. Juli, 18:00 Uhr
-const partyDate = new Date("2025-07-05T18:00:00");
-const countdownElement = document.getElementById("countdown");
-
-function updateCountdown() {
-  const now = new Date();
-  const timeLeft = partyDate - now;
-
-  if (timeLeft <= 0) {
-    countdownElement.textContent = "🎉 Die Party läuft schon! Los geht's!";
-    clearInterval(timer);
-    return;
-  }
-
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
-  const seconds = Math.floor((timeLeft / 1000) % 60);
-
-  countdownElement.textContent =
-    `${days} Tage, ${hours} Std, ${minutes} Min, ${seconds} Sek`;
-}
-
-const timer = setInterval(updateCountdown, 1000);
-updateCountdown();
-</script>
-
-
-  </body>
+    <img src="images/beari.jpg" alt="Bild" width="400" />
+  </main>
+</body>
 </html>
+
+
