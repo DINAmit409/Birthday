@@ -21,6 +21,7 @@ main {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 /* Überschriften */
@@ -39,60 +40,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-/* Formularfelder */
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 2px solid #f7c7f7;
-  border-radius: 12px;
-  box-sizing: border-box;
-  font-size: 1em;
-  background-color: #fff0fb;
-}
-
-/* Radiobuttons */
-input[type="radio"] {
-  margin-right: 8px;
-}
-
-/* Button */
-button {
-  background-color: #cc66cc;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-button:hover {
-  background-color: #b84db8;
-}
-
-/* Danke-Nachricht */
-#dankeNachricht {
-  margin-top: 20px;
-  font-size: 1.2em;
-  color: #008000;
-}
-
-#countdown {
-  background-color: #ffe6f2;
-  padding: 15px;
-  border-radius: 15px;
-  text-align: center;
-  color: #cc0066;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 
 /* Bild am Ende */
 img {
